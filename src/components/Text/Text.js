@@ -1,5 +1,5 @@
 const Text = () => {
-    return <h1 className='title'>Hello 21-3</h1>
+    return <h1 className='title'>Hello User</h1>
 }
 
 
