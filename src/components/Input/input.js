@@ -1,17 +1,15 @@
-import { useState } from "react";
-import classes from './input.module.css';
+import classes from './input.module.css'
 
-const Input = () => {
-    const [ newSearch, setNewSearch ] = useState('');
-     const isShowChangeText = (text) => {
-          setNewSearch(text);
-         console.log(newSearch)
-    }
+
+const Input = ({ placeholder, onChange, value, name}) => {
     return (
-        <div className={classes.Input}>
-            <input type="text" placeholder="Search..." onChange={(event) =>  isShowChangeText(event.target.value)}/>
-            <p>{newSearch}</p>
-        </div>
+        <input
+        className={classes.input}
+        type="text"
+        name={name}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}   />
     )
 }
 
